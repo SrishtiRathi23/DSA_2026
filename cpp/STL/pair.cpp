@@ -14,16 +14,41 @@ int examplepair1(string name, int age){
     return 0;
 }
 
-int main(){
-    int t;
-    cin>>t;
-    while(t--){
-    string firstname;
-    cout<<"Enter first name";
-    cin>>firstname;
-    int age;
-    cout<<"Enter your age";
-    cin>>age;
-    examplepair1(firstname, age);
+int example2(vector<pair<int,int>> &arr){
+    int n=arr.size();
+    for(int i=0;i<n;i++){
+        cout<<"Enter the elements of the pairs of array: ";
+        cin>>arr[i].first>>arr[i].second;
     }
+    for(int i=0;i<n;i++){
+        cout<<"("<<arr[i].first<<","<<arr[i].second<<")";
+    }
+    return 0;
+}
+// int main(){
+// int n;
+    // cin>>n;
+    // vector<pair<int,int>> arr1(n);
+    // example2(arr1);
+    // return 0;
+// }
+
+int example3(vector<pair<int,int>> &arr){
+
+}
+ 
+int main(){
+    int n;
+    cout<<"Enter the size of the array: ";
+    cin>>n;
+    vector<pair<int,int>> arr(n);
+    for(int i=0;i<n;i++){
+        cout<<"Enter the elements: ";
+        cin>>arr[i].first>>arr[i].second;
+    }
+    for(int i=0;i<n;i++){
+        cout<<"("<<arr[i].first<<","<<arr[i].second<<")"<<endl;
+    }
+    example3(arr);
+    
 }
